@@ -32,3 +32,17 @@ subject to {
 	  other_constraints: x[cab] >= 0;
 }
 
+// Post Processing
+
+execute {
+	if (cplex.getCplexStatus() == 1) {
+		writeln("Solution found:");
+		writeln("Number of Cabinets X and Y: " + x)
+		writeln("Max Space: " + max_space);
+	} else {
+		writeln("Solution not found");	
+	}
+}
+
+ 
+
