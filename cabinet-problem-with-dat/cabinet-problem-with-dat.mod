@@ -33,7 +33,6 @@ subject to {
 }
 
 // Post Processing
-
 execute {
 	if (cplex.getCplexStatus() == 1) {
 		writeln("Solution found:");
