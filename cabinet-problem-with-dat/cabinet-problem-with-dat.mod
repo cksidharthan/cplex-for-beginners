@@ -43,6 +43,3 @@ execute {
 		writeln("Solution not found");	
 	}
 }
-
- 
-
