@@ -9,24 +9,21 @@
  dvar float+ y;
  
  // Optimal Solution
- dexpr float solution = 3000 * x + 5000 * y;
- maximize solution;
+ dexpr float max_holding = 8 * x + 12 * y;
+ maximize max_holding;
  
  // Constraints
  subject to {
- 	constraint1:
- 	x <= 4;
+ 	cost_constraint:
+ 	10 * x + 20 * y <= 140;
  	
- 	constraint2:
- 	2 * y <= 12;
+ 	space_constraint:
+ 	6 * x + 8 * y <= 72;
  	
- 	constraint3:
- 	3 * x + 2 * y <= 18;
- 	
- 	constraint4:
+ 	x_constraint:
  	x >= 0;
  	
- 	constraint5:
+ 	y_constraint:
  	y >= 0; 
  }
  
