@@ -1,6 +1,11 @@
 /*********************************************
  * OPL 12.9.0.0 Model
  * Author: Sidharthan Kamaraj
+ * Creation Date: May 7, 2020 at 10:26:04 PM
+ *********************************************/
+/*********************************************
+ * OPL 12.9.0.0 Model
+ * Author: Sidharthan Kamaraj
  * Creation Date: May 7, 2020 at 9:20:47 PM
  *********************************************/
 
@@ -30,10 +35,6 @@ subject to {
 	  
 	forall(cab in cabinets)
 	  other_constraints: x[cab] >= 0;
-}
-
-main {
-	thisOplModel.generate(); cplex.exportModel("model.mps");
 }
 
 // Post Processing

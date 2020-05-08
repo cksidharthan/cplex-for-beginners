@@ -1,0 +1,30 @@
+/*********************************************
+ * OPL 12.9.0.0 Data
+ * Author: Sidharthan Kamaraj
+ * Creation Date: May 7, 2020 at 10:26:04 PM
+ *********************************************/
+ 
+num_cabinet = 2;
+num_condition = 2;
+ 
+SheetConnection cabinet_problem_sheet("cabinet_problem.xlsx");
+
+/* Direct Referencing */
+//holding from SheetRead(cabinet_problem_sheet, "'data'!B4:C4");
+//budget from SheetRead(cabinet_problem_sheet, "'data'!D2:D3");
+//value from SheetRead(cabinet_problem_sheet, "'data'!B2:C3");
+
+/* With Group Name in Excel Sheet */
+holding from SheetRead(cabinet_problem_sheet, "holding");
+budget from SheetRead(cabinet_problem_sheet, "budget");
+value from SheetRead(cabinet_problem_sheet, "value");
+
+/* Write Values to the Excel file */
+// Using Cell Name
+//x to SheetWrite(cabinet_problem_sheet, "'data'!B6:C6");
+//max_space to SheetWrite(cabinet_problem_sheet, "'data'!B7");
+
+/* Write Values to the Excel file */
+// Using Cell Group Name
+x to SheetWrite(cabinet_problem_sheet, "cabinet_result");
+max_space to SheetWrite(cabinet_problem_sheet, "space_result");
