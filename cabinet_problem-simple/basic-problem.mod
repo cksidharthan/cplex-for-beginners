@@ -28,14 +28,11 @@
  }
  
  // Post Processing
- execute {
+ execute GetSolutions {
  	if (cplex.getCplexStatus() == 1) {
- 		writeln("Solution Found - x = " + x + " y = " + y ) 
- 		writeln("x = " + x)
- 		writeln("y = " + y)
- 		writeln("solution = " + solution)	
+ 		writeln("Solution Found - x = " + x + " y = " + y );
  	} else {
- 		writeln("Solution not found") 	
+ 		writeln("Solution not found"); 	
  	}
  }
  
