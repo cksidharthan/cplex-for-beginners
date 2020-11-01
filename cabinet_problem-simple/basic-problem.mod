@@ -31,6 +31,7 @@
  execute GetSolutions {
  	if (cplex.getCplexStatus() == 1) {
  		writeln("Solution Found - x = " + x + " y = " + y );
+ 		writeln("Max Holding = " + max_holding)
  	} else {
  		writeln("Solution not found"); 	
  	}
